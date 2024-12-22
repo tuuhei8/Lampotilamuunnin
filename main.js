@@ -8,34 +8,34 @@ function laske(event) {
     let lampo = document.getElementById('lampo').value;
     let radio = document.querySelector('input[name="muunnin"]:checked');
     if (lampo.length < 1 && radio == null) {
-        alert('Anna lämpötila ja valitse desimaali')
+        document.getElementById('tulosta').innerHTML = 'Anna lämpötila ja valitse desimaali!'
         return
     }
     if (lampo.length < 1) {
-        alert('Anna lämpötila')
+        document.getElementById('tulosta').innerHTML = 'Anna lämpötila!'
         return
     }
     if (isNaN(+lampo)) {
-        alert('Lämpötilan täytyy olla numero')
+        document.getElementById('tulosta').innerHTML = 'Lämpötilan täytyy olla numero!'
         return
     }
     if (radio) {
         if (tyyppi.selectedIndex === 0) {
             if (+lampo < -273.15) {
-                alert('Lämpötila ei voi olla pienempi kuin -273.15 Celsius')
+                document.getElementById('tulosta').innerHTML = 'Lämpötila ei voi olla pienempi kuin -273.15 Celsius!'
                 return
             }
             celsiusToFahrenheit(+radio.value, +lampo)
         };
         if (tyyppi.selectedIndex === 1) {
             if (+lampo < -459.67) {
-                alert('Lämpötila ei voi olla pienempi kuin -459.67 Fahrenheit')
+                document.getElementById('tulosta').innerHTML = 'Lämpötila ei voi olla pienempi kuin -459.67 Fahrenheit!'
                 return
             }
             fahrenheitToCelsius(+radio.value, +lampo)
         };
     } else {
-        alert('Valitse desimaali')
+        document.getElementById('tulosta').innerHTML = 'Valitse desimaali!'
         return
     }
 };
