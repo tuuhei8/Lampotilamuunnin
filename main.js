@@ -4,7 +4,6 @@ btn.addEventListener('click', laske);
 
 function laske(event) {
     event.preventDefault();
-    console.log(tyyppi.selectedIndex);
     let lampo = document.getElementById('lampo').value;
     let radio = document.querySelector('input[name="muunnin"]:checked');
     if (lampo.length < 1 && radio == null) {
