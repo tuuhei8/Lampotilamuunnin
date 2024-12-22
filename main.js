@@ -41,10 +41,10 @@ function laske(event) {
 
 function celsiusToFahrenheit(desimaali, lampo) {
     let tulo = lampo * 1.8 + 32;
-    document.getElementById('tulosta').innerHTML = tulo.toFixed(desimaali);
+    document.getElementById('tulosta').innerHTML = tulo.toFixed(desimaali) + ' °F';
 };
 
 function fahrenheitToCelsius(desimaali, lampo) {
     let tulo = (lampo - 32) /1.8;
-    document.getElementById('tulosta').innerHTML = tulo.toFixed(desimaali);
+    document.getElementById('tulosta').innerHTML = tulo.toFixed(desimaali) + ' °C';
 };
